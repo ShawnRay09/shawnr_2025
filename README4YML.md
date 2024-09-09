@@ -11,21 +11,24 @@ toc: true
     <title>TicTacToe</title>
 </head>
 <body>
-    <div class="mode-selection">
-        <button id="player-vs-player">Player vs Player</button>
-        <button id="player-vs-bot">Player vs Bot</button>
+    <div class="tictactoe-container">
+        <div class="mode-selection">
+            <button id="player-vs-player">Player vs Player</button>
+            <button id="player-vs-bot">Player vs Bot</button>
+        </div>
+        <div id="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div id="message"></div>
     </div>
-    <div id="game-board">
-        <div class="cell" data-index="0"></div>
-        <div class="cell" data-index="1"></div>
-        <div class="cell" data-index="2"></div>
-        <div class="cell" data-index="3"></div>
-        <div class="cell" data-index="4"></div>
-        <div class="cell" data-index="5"></div>
-        <div class="cell" data-index="6"></div>
-        <div class="cell" data-index="7"></div>
-        <div class="cell" data-index="8"></div>
-    </div>
-    <div id="message"></div>
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>
