@@ -27,6 +27,5 @@ toc: true
         <div class="cell" data-index="8"></div>
     </div>
     <div id="message"></div>
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>
