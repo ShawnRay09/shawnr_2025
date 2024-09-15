@@ -189,7 +189,7 @@ hide: true
 
 </script>
 
-<h1><strong>Welcome to my Website! Click around!</strong></h1> <img src="{{site.baseurl}}/images/thumb-up-emoticon-vector-1075395.jpg" alt="Thumbs Up">
+<h1><strong>Welcome to my Website! Click around!</strong></h1>
 
 <body>
 <style>
@@ -224,7 +224,7 @@ hide: true
 
 <table>
   <tr>
-      <td width = "150"><img src="{{site.baseurl}}/images/Flag_of_India.svg.png" height="auto" title="Pair" alt="Indian Flag"></td>
+      <td width = "150"><img src="{{site.baseurl}}/images/thumb-up-emoticon-vector-1075395.jpg" height="auto" title="Pair" alt="Thumbs up"></td>
       <td><a href="Valorant%20Rant">Mini Project</a></td>
       <td><a href="tictactoe">TicTacToe</a></td>
       <td><a href="cookie_clicker">Cookie Clicker</a></td>
