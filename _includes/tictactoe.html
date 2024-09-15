@@ -96,7 +96,7 @@
             messageDiv.textContent = `Player ${currentPlayer}'s turn`;
 
             if (gameMode === 'PvB' && currentPlayer === 'O') {
-                botMove();
+                setTimeout(botMove, 100);
             }
         }
 
@@ -115,7 +115,6 @@
             }
             currentPlayer = 'X';
             messageDiv.textContent = `Player ${currentPlayer}'s turn`;
-            renderBoard();
         }
 
         function checkWinner() {
@@ -134,9 +133,9 @@
         function resetGame() {
             board = ['', '', '', '', '', '', '', '', ''];
             currentPlayer = 'X';
+            gameActive = false;
             messageDiv.textContent = `Player ${currentPlayer}'s turn`;
             renderBoard();
         }
     </script>
 </body>
-</html>
