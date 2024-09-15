@@ -110,6 +110,11 @@
 
 
         document.addEventListener('keydown', function(e) {
+            // Prevent default action for arrow keys
+            e.preventDefault();
+
+            // Debug: Log key code
+            console.log('Key pressed: ' + e.which);
             
             if (e.which ===37 && snake.dx === 0) {
                 snake.dx =-grid;
