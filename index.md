@@ -191,6 +191,37 @@ hide: true
 
 <h1><strong>Welcome to my Website! Click around!</strong></h1> <img src="{{site.baseurl}}/images/thumb-up-emoticon-vector-1075395.jpg" alt="Thumbs Up">
 
+<body>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  td {
+    padding: 10px;
+    border: 1px solid #40E0D0
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  a:hover {
+    color: #0056b3;
+  }
+  table td:first-child {
+    width: 150px;
+  }
+
+</style>
+</body>
+
 <table>
   <tr>
       <td width = "150"><img src="{{site.baseurl}}/images/Flag_of_India.svg.png" height="auto" title="Pair" alt="Indian Flag"></td>
