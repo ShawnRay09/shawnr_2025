@@ -197,6 +197,6 @@ hide: true
       <td><a href="Valorant%20Rant">Mini Project</a></td>
       <td><a href="README4YML.html">TicTacToe</a></td>
       <td><a href="cookie_clicker">Cookie Clicker</a></td>
-      <td><a href=" ">Snake</a></td>
+      <td><a href="snake">Snake</a></td>
     </tr>
   </table>
