@@ -83,6 +83,8 @@
             if (board[index] !== '' || !gameActive) return;
 
             board[index] = currentPlayer;
+            renderBoard(); // Ensure the board is rendered before checking for a winner
+            
             if (checkWinner()) {
                 messageDiv.textContent = `Player ${currentPlayer} wins!`;
                 gameActive = false;
@@ -92,11 +94,12 @@
                 gameActive = false;
                 return;
             }
+
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             messageDiv.textContent = `Player ${currentPlayer}'s turn`;
 
             if (gameMode === 'PvB' && currentPlayer === 'O') {
-                setTimeout(botMove, 100);
+                setTimeout(botMove, 100); // Delay bot move slightly to let the board render
             }
         }
 
@@ -104,6 +107,8 @@
             let emptyCells = board.map((cell, index) => cell === '' ? index : null).filter(index => index !== null);
             let randomMove = emptyCells[Math.floor(Math.random() * emptyCells.length)];
             board[randomMove] = 'O';
+            renderBoard(); // Ensure the board is rendered before checking for a winner
+
             if (checkWinner()) {
                 messageDiv.textContent = "Bot wins!";
                 gameActive = false;
@@ -113,6 +118,7 @@
                 gameActive = false;
                 return;
             }
+
             currentPlayer = 'X';
             messageDiv.textContent = `Player ${currentPlayer}'s turn`;
         }
@@ -133,8 +139,8 @@
         function resetGame() {
             board = ['', '', '', '', '', '', '', '', ''];
             currentPlayer = 'X';
-            gameActive = false;
-            messageDiv.textContent = `Player ${currentPlayer}'s turn`;
+            gameActive = false; // Make sure game is inactive initially
+            messageDiv.textContent = `Choose Game Mode:`;
             renderBoard();
         }
     </script>
