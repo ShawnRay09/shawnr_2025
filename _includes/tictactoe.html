@@ -1,0 +1,53 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #game {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            border: 1px solid #000;
+            cursor: pointer;
+            user-select: none;
+        }
+        .cell:hover {
+            background-color: #eee;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        #message {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="message">Choose Game Mode:</div>
+        <button onclick="startGame('PvP')">Player vs. Player</button>
+        <button onclick="startGame('PvB')">Player vs. Bot</button>
+        <div id="game"></div>
+        <button id="reset" onclick="resetGame()">Reset Game</button>
+    </body>
+   
