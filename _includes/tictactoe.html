@@ -1,11 +1,13 @@
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
@@ -42,12 +44,99 @@
             margin-bottom: 10px;
         }
     </style>
-    </head>
-    <body>
-        <div id="message">Choose Game Mode:</div>
-        <button onclick="startGame('PvP')">Player vs. Player</button>
-        <button onclick="startGame('PvB')">Player vs. Bot</button>
-        <div id="game"></div>
-        <button id="reset" onclick="resetGame()">Reset Game</button>
-    </body>
-   
+</head>
+<body>
+    <div id="message">Choose Game Mode:</div>
+    <button onclick="startGame('PvP')">Player vs. Player</button>
+    <button onclick="startGame('PvB')">Player vs. Bot</button>
+    <div id="game"></div>
+    <button id="reset" onclick="resetGame()">Reset Game</button>
+    
+    <script>
+        const gameDiv = document.getElementById('game');
+        const messageDiv = document.getElementById('message');
+        let gameMode = '';
+        let board = [];
+        let currentPlayer = 'X';
+        let gameActive = false;
+
+        function startGame(mode) {
+            gameMode = mode;
+            resetGame();
+            gameActive = true;
+            renderBoard();
+            messageDiv.textContent = `Player ${currentPlayer}'s turn`;
+        }
+
+        function renderBoard() {
+            gameDiv.innerHTML = '';
+            board.forEach((cell, index) => {
+                const cellDiv = document.createElement('div');
+                cellDiv.className = 'cell';
+                cellDiv.textContent = cell;
+                cellDiv.onclick = () => handleCellClick(index);
+                gameDiv.appendChild(cellDiv);
+            });
+        }
+
+        function handleCellClick(index) {
+            if (board[index] !== '' || !gameActive) return;
+
+            board[index] = currentPlayer;
+            if (checkWinner()) {
+                messageDiv.textContent = `Player ${currentPlayer} wins!`;
+                gameActive = false;
+                return;
+            } else if (board.every(cell => cell !== '')) {
+                messageDiv.textContent = "It's a draw!";
+                gameActive = false;
+                return;
+            }
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            messageDiv.textContent = `Player ${currentPlayer}'s turn`;
+
+            if (gameMode === 'PvB' && currentPlayer === 'O') {
+                botMove();
+            }
+        }
+
+        function botMove() {
+            let emptyCells = board.map((cell, index) => cell === '' ? index : null).filter(index => index !== null);
+            let randomMove = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            board[randomMove] = 'O';
+            if (checkWinner()) {
+                messageDiv.textContent = "Bot wins!";
+                gameActive = false;
+                return;
+            } else if (board.every(cell => cell !== '')) {
+                messageDiv.textContent = "It's a draw!";
+                gameActive = false;
+                return;
+            }
+            currentPlayer = 'X';
+            messageDiv.textContent = `Player ${currentPlayer}'s turn`;
+            renderBoard();
+        }
+
+        function checkWinner() {
+            const winningCombinations = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+                [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+                [0, 4, 8], [2, 4, 6] // Diagonals
+            ];
+
+            return winningCombinations.some(combination => {
+                const [a, b, c] = combination;
+                return board[a] !== '' && board[a] === board[b] && board[a] === board[c];
+            });
+        }
+
+        function resetGame() {
+            board = ['', '', '', '', '', '', '', '', ''];
+            currentPlayer = 'X';
+            messageDiv.textContent = `Player ${currentPlayer}'s turn`;
+            renderBoard();
+        }
+    </script>
+</body>
+</html>

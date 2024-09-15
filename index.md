@@ -195,7 +195,7 @@ hide: true
   <tr>
       <td width = "150"><img src="{{site.baseurl}}/images/Flag_of_India.svg.png" height="auto" title="Pair" alt="Indian Flag"></td>
       <td><a href="Valorant%20Rant">Mini Project</a></td>
-      <td><a href="README4YML.html">TicTacToe</a></td>
+      <td><a href="tictactoe">TicTacToe</a></td>
       <td><a href="cookie_clicker">Cookie Clicker</a></td>
       <td><a href="snake">Snake</a></td>
     </tr>
