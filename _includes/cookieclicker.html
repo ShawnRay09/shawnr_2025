@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #cookie-container {
+            margin: 20px;
+        }
+
+        #cookie {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cookie Clicker</h1>
+        <div id="cookie-container">
+            <img id="cookie" src="https://img.icons8.com/ios/50/000000/cookie.png" alt="Cookie">
+        </div>
+        <p>Cookies: <span id="cookie-count">0</span></p>
+        <button id="buy-upgrade">Buy Upgrade (Cost: <span id="upgrade-cost">10</span> cookies)</button>
+        <p>Upgrades: <span id="upgrade-count">0</span></p>
+    </div>
+    <script>
+        let cookieCount = 0;
+        let upgradeCount = 0;
+        const upgradeCost = 10;
+
+        const cookieElement = document.getElementById('cookie');
+        const cookieCountElement = document.getElementById('cookie-count');
+        const upgradeCountElement = document.getElementById('upgrade-count');
+        const upgradeCostElement = document.getElementById('upgrade-cost');
+        const buyUpgradeButton = document.getElementById('buy-upgrade');
+
+        function updateDisplay() {
+            cookieCountElement.textContent = cookieCount;
+            upgradeCountElement.textContent = upgradeCount;
+            upgradeCostElement.textContent = upgradeCost * (upgradeCount + 1);
+        }
+
+        function addCookie() {
+            cookieCount += 1 + upgradeCount;
+            updateDisplay();
+        }
+
+        function buyUpgrade() {
+            const cost = upgradeCost * (upgradeCount + 1);
+            if (cookieCount >= cost) {
+                cookieCount -= cost;
+                upgradeCount += 1;
+                updateDisplay();
+            }
+        }
+
+        cookieElement.addEventListener('click', addCookie);
+        buyUpgradeButton.addEventListener('click', buyUpgrade);
+
+        updateDisplay();
+    </script>
+</body>
+</html>
