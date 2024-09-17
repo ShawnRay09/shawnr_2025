@@ -1,0 +1,139 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff
+        }
+
+        .dropdown-table {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .dropdown-header {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.25rem;
+            border-radius: 5px;
+            margin-top: 10px;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-header:hover {
+            background-color: #45a049
+        }
+
+        .dropdown-content {
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        th, td {
+            border: 1px solid #bbb;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        td {
+            background-color: #fff;
+            color: #333;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .arrow {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+
+        .rotate {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-table">
+        <div class="dropdown-header" onclick="toggleDropdown(1)">Week 1 <span class="arrow">&#9660;</span></div>
+        <div class="dropdown-content" id="week-1">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Finished</th>
+                        <th>Goals</th>
+                        <th>Explanation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hacks 1</td>
+                        <td> Hacks 2</td>
+                        <td>Used github and terminal</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dropdown-header" onclick="toggleDropdown(2)">Week 2 <span class="arrow">&#9660;</span></div>
+        <div class="dropdown-content" id="week-2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Finished</th>
+                        <th>Goals</th>
+                        <th>Explaination</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Games</td>
+                        <td>More Games</td>
+                        <td>Java Script</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+
+<script>
+    function toggleDropdown(week) {
+        var content = document.getElementById('week-' + week);
+        var arrow = content.previousElementSibling.querySelector('.arrow');
+
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            arrow.classList.remove('rotate');
+        } else {
+            content.style.display = "block";
+            arrow.classList.add('rotate');
+        }
+    }
+</script>
+</body>
