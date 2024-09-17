@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +35,10 @@
             font-size: 16px;
             cursor: pointer;
         }
+
+        #auto-clicker-container {
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -43,27 +49,44 @@
         <p>Cookies: <span id="cookie-count">0</span></p>
         <button id="buy-upgrade">Buy Upgrade (Cost: <span id="upgrade-cost">10</span> cookies)</button>
         <p>Upgrades: <span id="upgrade-count">0</span></p>
+        <div id="auto-clicker-container">
+            <p>Auto-Clickers: <span id="auto-clicker-count">0</span></p>
+            <button id="buy-auto-clicker">Buy Auto-Clicker (Cost: <span id="auto-clicker-cost">50</span> cookies)</button>
+        </div>
+        <!-- Add the audio element for the sound effect -->
+        <audio id="click-sound" src="/images/Click Sound Effect.mp3"></audio>
     </div>
     <script>
         let cookieCount = 0;
         let upgradeCount = 0;
+        let autoClickerCount = 0;
         const upgradeCost = 10;
+        const autoClickerCost = 50;
+        const autoClickerInterval = 1000; // Auto-click every 1000 milliseconds (1 second)
 
         const cookieElement = document.getElementById('cookie');
         const cookieCountElement = document.getElementById('cookie-count');
         const upgradeCountElement = document.getElementById('upgrade-count');
         const upgradeCostElement = document.getElementById('upgrade-cost');
+        const autoClickerCountElement = document.getElementById('auto-clicker-count');
+        const autoClickerCostElement = document.getElementById('auto-clicker-cost');
         const buyUpgradeButton = document.getElementById('buy-upgrade');
+        const buyAutoClickerButton = document.getElementById('buy-auto-clicker');
+        const clickSound = document.getElementById('click-sound');
 
         function updateDisplay() {
             cookieCountElement.textContent = cookieCount;
             upgradeCountElement.textContent = upgradeCount;
             upgradeCostElement.textContent = upgradeCost * (upgradeCount + 1);
+            autoClickerCountElement.textContent = autoClickerCount;
+            autoClickerCostElement.textContent = autoClickerCost * (autoClickerCount + 1);
         }
 
         function addCookie() {
             cookieCount += 1 + upgradeCount;
             updateDisplay();
+            // Play the click sound
+            clickSound.play();
         }
 
         function buyUpgrade() {
@@ -75,9 +98,33 @@
             }
         }
 
+        function buyAutoClicker() {
+            const cost = autoClickerCost * (autoClickerCount + 1);
+            if (cookieCount >= cost) {
+                cookieCount -= cost;
+                autoClickerCount += 1;
+                updateDisplay();
+                startAutoClicker();
+            }
+        }
+
+        function startAutoClicker() {
+            // If there's already an auto-clicker interval running, clear it
+            if (window.autoClickerIntervalId) {
+                clearInterval(window.autoClickerIntervalId);
+            }
+
+            window.autoClickerIntervalId = setInterval(() => {
+                cookieCount += autoClickerCount;
+                updateDisplay();
+            }, autoClickerInterval);
+        }
+
+        // Initialize display and set up event listeners
+        updateDisplay();
         cookieElement.addEventListener('click', addCookie);
         buyUpgradeButton.addEventListener('click', buyUpgrade);
-
-        updateDisplay();
+        buyAutoClickerButton.addEventListener('click', buyAutoClicker);
     </script>
 </body>
+</html>
