@@ -229,5 +229,6 @@ hide: true
       <td><a href="tictactoe">TicTacToe</a></td>
       <td><a href="cookie_clicker">Cookie Clicker</a></td>
       <td><a href="snake">Snake</a></td>
+      <td><a href="calculators">Calculator</a></td>
     </tr>
   </table>
