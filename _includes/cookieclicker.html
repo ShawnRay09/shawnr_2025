@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,7 +53,7 @@
             <p>Auto-Clickers: <span id="auto-clicker-count">0</span></p>
             <button id="buy-auto-clicker">Buy Auto-Clicker (Cost: <span id="auto-clicker-cost">50</span> cookies)</button>
         </div>
-        <!-- Add the audio element for the sound effect -->
+       
         <audio id="click-sound" src="/images/Click Sound Effect.mp3"></audio>
     </div>
     <script>
@@ -85,7 +85,11 @@
         function addCookie() {
             cookieCount += 1 + upgradeCount;
             updateDisplay();
-            // Play the click sound
+            
+            clickSound.currentTime = 0;
+            clickSound.play().catch(error => {
+                console.error('Error playing sound:', error);
+            });
             clickSound.play();
         }
 
