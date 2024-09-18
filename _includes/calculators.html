@@ -1,3 +1,4 @@
+
 <head>
   <style>
     body {
@@ -14,7 +15,7 @@
       border-radius: 10px;
       padding: 20px;
       background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0,1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     #display {
@@ -60,7 +61,7 @@
       <button onclick="clearDisplay()">C</button>
       <button onclick="deleteLast()">DEL</button>
       <button onclick="appendToDisplay('(')">(</button>
-      <button onclick="appendToDisplay('(')">)</button>
+      <button onclick="appendToDisplay(')')">)</button>
       <button onclick="appendToDisplay('7')">7</button>
       <button onclick="appendToDisplay('8')">8</button>
       <button onclick="appendToDisplay('9')">9</button>
@@ -82,20 +83,26 @@
 
   <script>
     function appendToDisplay(value) {
-      document.getElementById("display").value = '';
+      document.getElementById("display").value += value; // Append the value to display
+    }
+
+    function clearDisplay() {
+      document.getElementById("display").value = ''; // Clear the display
     }
 
     function deleteLast() {
       let currentDisplay = document.getElementById("display").value;
-      document.getElementById("display").value = currentDisplay.slice(0, -1);
+      document.getElementById("display").value = currentDisplay.slice(0, -1); // Remove the last character
     }
 
-    function calculate () {
+    function calculate() {
       let expression = document.getElementById("display").value;
       try {
-        document.getElementById("display").value = eval(expression);
+        // Evaluate the expression safely
+        let result = eval(expression);
+        document.getElementById("display").value = result;
       } catch (error) {
-        document.getElementById("display").value = 'Error';
+        document.getElementById("display").value = 'Error'; // Show error if eval fails
       }
     }
   </script>
