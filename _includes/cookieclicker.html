@@ -54,9 +54,7 @@
             <button id="buy-auto-clicker">Buy Auto-Clicker (Cost: <span id="auto-clicker-cost">50</span> cookies)</button>
         </div>
        
-        <audio id="clickSound">
-            <source src="/images/Click Sound Effect.mp3" type="audio/mp3">
-            </audio>
+        <audio id="pointSound" src="{{site.baseurl}}/audio/cookie.mp3" preload="auto"></audio>
     </div>
     <script>
         let cookieCount = 0;
@@ -76,6 +74,11 @@
         const buyAutoClickerButton = document.getElementById('buy-auto-clicker');
         const clickSound = document.getElementById('click-sound');
 
+        function playPointSound() {
+        const pointSound = document.getElementById("pointSound");
+        pointSound.play();
+        }
+
         function updateDisplay() {
             cookieCountElement.textContent = cookieCount;
             upgradeCountElement.textContent = upgradeCount;
@@ -87,11 +90,8 @@
         function addCookie() {
             cookieCount += 1 + upgradeCount;
             updateDisplay();
+            playPointSound ()
             
-            clickSound.currentTime = 0;
-            clickSound.play().catch(error => {
-                console.error('Error playing sound:', error);
-            });
         }
 
         function buyUpgrade() {
