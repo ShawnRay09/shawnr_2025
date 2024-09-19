@@ -72,12 +72,14 @@
         const autoClickerCostElement = document.getElementById('auto-clicker-cost');
         const buyUpgradeButton = document.getElementById('buy-upgrade');
         const buyAutoClickerButton = document.getElementById('buy-auto-clicker');
-        const clickSound = document.getElementById('click-sound');
 
         function playPointSound() {
-        const pointSound = document.getElementById("pointSound");
-        pointSound.play();
-        }
+    const pointSound = document.getElementById("pointSound");
+    pointSound.play().catch(error => {
+        console.error("Error playing sound:", error);
+    });
+}
+
 
         function updateDisplay() {
             cookieCountElement.textContent = cookieCount;
