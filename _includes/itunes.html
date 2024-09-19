@@ -1,4 +1,9 @@
+
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore iTunes Music</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,7 +26,7 @@
             cursor: pointer;
         }
         #search-button:hover {
-            background-color: #005bb5
+            background-color: #005bb5;
         }
         .results {
             display: flex;
@@ -68,9 +73,13 @@
         const searchInput = document.getElementById('search-input');
 
         async function fetchMusic(query) {
-            const respons = await fetch('${apiUrl}${encodeURIComponent(query)}&limit=10');
-            const data =  await response.json();
-            displayResults(data.results);
+            try {
+                const response = await fetch(`${apiUrl}${encodeURIComponent(query)}&limit=10`);
+                const data = await response.json();
+                displayResults(data.results);
+            } catch (error) {
+                console.error('Error fetching music:', error);
+            }
         }
 
         function displayResults(results) {
@@ -79,44 +88,44 @@
                 const div = document.createElement('div');
                 div.classList.add('result');
                 div.innerHTML = `
-                <img src="${result.artworkUrl100}" alt="Album Art">
-                <div>
-                    <h3>${result.trackName} - ${result.artistName}</h3>
-                    <audio controls>
-                        <source src="${result.previewUrl}" type="audio/mpeg">
-                        Your browser does not support the audio tag.
+                    <img src="${result.artworkUrl100}" alt="Album Art">
+                    <div>
+                        <h3>${result.trackName} - ${result.artistName}</h3>
+                        <audio controls>
+                            <source src="${result.previewUrl}" type="audio/mpeg">
+                            Your browser does not support the audio tag.
                         </audio>
                         <button class="favorite" onclick="addToFavorites('${result.trackName}', '${result.previewUrl}', '${result.artworkUrl100}')">Add to Favorites</button>
-                        </div>
-                        `;
-                        reusltsDiv.appendChild(div);
+                    </div>
+                `;
+                resultsDiv.appendChild(div);
             });
         }
 
         function addToFavorites(name, previewUrl, artworkUrl) {
             const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-            favorites.push({ name, previewUrl, artworkUrl});
+            favorites.push({ name, previewUrl, artworkUrl });
             localStorage.setItem('favorites', JSON.stringify(favorites));
             displayFavorites();
         }
 
-        function displayFavorites () {
-            const favorites = JSON.parse(localStorage.getItem('favorites')) || {};
+        function displayFavorites() {
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
             favoritesDiv.innerHTML = '';
             favorites.forEach(favorite => {
                 const div = document.createElement('div');
                 div.classList.add('result');
                 div.innerHTML = `
-                <img src="${favorite.artworkUrl}" alt="Album Art">
-                <div>
-                    <h3>${favorite.name}</h3>
-                    <audio controls>
-                        <source src="${favorite.previewUrl}" type="audio/mpeg">
-                        Your browser does not support this audio tag.
+                    <img src="${favorite.artworkUrl}" alt="Album Art">
+                    <div>
+                        <h3>${favorite.name}</h3>
+                        <audio controls>
+                            <source src="${favorite.previewUrl}" type="audio/mpeg">
+                            Your browser does not support this audio tag.
                         </audio>
-                        </div>
-                        `;
-                        favoritesDiv.appendChild(div);
+                    </div>
+                `;
+                favoritesDiv.appendChild(div);
             });
         }
 
@@ -132,3 +141,4 @@
         });
     </script>
 </body>
+</html>
