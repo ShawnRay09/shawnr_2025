@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: About Me
 permalink: /about me/
+toc: True
+comments: True
 ---
 
 <h1><strong>Here are some things about me</strong></h1>
