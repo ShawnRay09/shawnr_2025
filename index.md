@@ -230,5 +230,6 @@ hide: true
       <td><a href="cookie_clicker">Cookie Clicker</a></td>
       <td><a href="snake">Snake</a></td>
       <td><a href="calculators">Calculator</a></td>
+      <td><a href="itunes">iTunes</a></td>
     </tr>
   </table>
