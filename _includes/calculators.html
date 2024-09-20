@@ -1,4 +1,3 @@
-
 <head>
   <style>
     body {
@@ -16,6 +15,8 @@
       padding: 20px;
       background-color: white;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      width: 100%;
     }
 
     #display {
@@ -52,6 +53,16 @@
     button:active {
       background-color: #ccc;
     }
+
+    #history {
+      margin-top: 20px;
+      max-height: 100px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -79,6 +90,7 @@
       <button onclick="calculate()">=</button>
       <button onclick="appendToDisplay('+')">+</button>
     </div>
+    <div id="history"></div>
   </div>
 
   <script>
@@ -101,9 +113,17 @@
         // Evaluate the expression safely
         let result = eval(expression);
         document.getElementById("display").value = result;
+        addToHistory(expression + ' = ' + result);
       } catch (error) {
         document.getElementById("display").value = 'Error'; // Show error if eval fails
       }
+    }
+
+    function addToHistory(entry) {
+      const historyDiv = document.getElementById("history");
+      const historyItem = document.createElement("div");
+      historyItem.textContent = entry;
+      historyDiv.prepend(historyItem); // Add new entry to the top
     }
   </script>
 </body>
