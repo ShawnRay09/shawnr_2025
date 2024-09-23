@@ -189,23 +189,28 @@ hide: true
 
 </script>
 
-<h1><strong>Welcome to my Website! Click around!</strong></h1>
-
 <body>
 <style>
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   td {
-    padding: 10px;
-    border: 1px solid #40E0D0
+    padding: 15px;
+    border: 1px solid #40E0D0;
     text-align: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+  }
+  td:hover {
+    background-color: #e0f7fa; /* Light cyan on hover */
   }
   img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
   }
   a {
     text-decoration: none;
@@ -218,13 +223,11 @@ hide: true
   table td:first-child {
     width: 150px;
   }
-
 </style>
-</body>
 
 <table>
   <tr>
-      <td width = "150"><img src="{{site.baseurl}}/images/thumb-up-emoticon-vector-1075395.jpg" height="auto" title="Pair" alt="Thumbs up"></td>
+      <td><img src="{{site.baseurl}}/images/thumb-up-emoticon-vector-1075395.jpg" alt="Thumbs up" title="Pair"></td>
       <td><a href="Valorant%20Rant">Mini Project</a></td>
       <td><a href="tictactoe">TicTacToe</a></td>
       <td><a href="cookie_clicker">Cookie Clicker</a></td>
@@ -232,4 +235,5 @@ hide: true
       <td><a href="calculators">Calculator</a></td>
       <td><a href="itunes">iTunes</a></td>
     </tr>
-  </table>
+</table>
+</body>
