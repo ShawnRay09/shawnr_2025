@@ -8,6 +8,55 @@ permalink: /PicturesofmyDog/
 <img src="{{site.baseurl}}/images/IMG_5724.JPG" alt="DI3" width="25%" height="auto">
 <img src="{{site.baseurl}}/images/IMG_5626.JPG" alt="DI4" width="25%" height="auto"> <img src="{{site.baseurl}}/images/IMG_4385.JPG" alt="DI5" width="40%" height="auto"> <img src="{{site.baseurl}}/images/IMG_4090.JPG" alt="DI6" width="30%" height="auto"> <img src="{{site.baseurl}}/images/IMG_9831.thumbnail.jpg" alt="DI3" width="40%" height="auto">
 
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #4a90e2;
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+        #fact {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            border: 2px solid #4a90e2;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+<body>
+
 
 <h1>Click Here to Learn a Random Fact About my Dog!</h1>
 
