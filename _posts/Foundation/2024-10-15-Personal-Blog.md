@@ -12,10 +12,15 @@ comments: True
 
 We taught lesson 3.8 which was iterations
 1. Loops
+
     -For Loops
+
     -While Loops
+
     -Do-While Loops
+
     -Infinite Loops
+
 2. Nested-If Statements
 3. Try/Except
 4. Dictionaries
@@ -34,62 +39,67 @@ We taught lesson 3.8 which was iterations
         <th>Lesson</th>
         <th>Thing Learned 1</th>
         <th>Thing Learned 2</th>
+        <th>Hacks</th>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p1/3-1-1" target="_blank">Lesson 3.1</a></td>
-        <td contenteditable="true">Introduction to Python syntax and basic data types</td>
-        <td contenteditable="true">How to use variables and print statements</td>
+        <td contenteditable="true">Manipulating string data</td>
+        <td contenteditable="true">Basic print statements</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/08/3-1_3-4_hacks.html" target="_blank">Hack 3.1</a></td>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/home" target="_blank">Lesson 3.2</a></td>
-        <td contenteditable="true">Understanding conditionals and if-else statements</td>
-        <td contenteditable="true">Logical operators and their role in decision-making</td>
+        <td contenteditable="true">Understanding variable scope</td>
+        <td contenteditable="true">Data types overview</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/09/3_2_hacks.html" target="_blank">Hack 3.2</a></td>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-3/p1" target="_blank">Lesson 3.3</a></td>
-        <td contenteditable="true">Introduction to loops, focusing on for loops</td>
-        <td contenteditable="true">How loops help automate repetitive tasks</td>
+        <td contenteditable="true">Using expressions for calculations</td>
+        <td contenteditable="true">Arithmetic operations</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/11/3_3_hacks.html" target="_blank">Hack 3.3</a></td>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p1/3-4" target="_blank">Lesson 3.4</a></td>
-        <td contenteditable="true">Working with while loops and conditions</td>
-        <td contenteditable="true">Difference between for and while loops</td>
+        <td contenteditable="true">Advanced string manipulation</td>
+        <td contenteditable="true">String methods and formatting</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/08/3-1_3-4_hacks.html" target="_blank">Hack 3.4</a></td>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-5/p1" target="_blank">Lesson 3.5</a></td>
-        <td contenteditable="true">Introduction to functions and defining reusable code</td>
-        <td contenteditable="true">How to pass arguments to functions</td>
+        <td contenteditable="true">Boolean logic in programming</td>
+        <td contenteditable="true">True/False evaluations</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/11/3_5_hacks.html" target="_blank">Hack 3.5</a></td>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-6/p1" target="_blank">Lesson 3.6</a></td>
-        <td contenteditable="true">Understanding return values in functions</td>
-        <td contenteditable="true">Best practices for function naming and modularity</td>
+        <td contenteditable="true">Using conditions to control flow</td>
+        <td contenteditable="true">If statements and outcomes</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/09/3_6-3_7.html" target="_blank">Hack 3.6</a></td>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-7/p1" target="_blank">Lesson 3.7</a></td>
-        <td contenteditable="true">Introduction to lists and how to manipulate them</td>
-        <td contenteditable="true">Basic list methods like append, remove, and sort</td>
-    </tr>
-
-    <tr>
-        <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-8/p1" target="_blank">Lesson 3.8</a></td>
-        <td contenteditable="true">Working with dictionaries and key-value pairs</td>
-        <td contenteditable="true">How to iterate through a dictionary using loops</td>
+        <td contenteditable="true">Complex conditional structures</td>
+        <td contenteditable="true">Chaining conditions</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/09/3_6-3_7.html" target="_blank">Hack 3.7</a></td>
     </tr>
 
     <tr>
         <td><a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p1/3-10" target="_blank">Lesson 3.10</a></td>
-        <td contenteditable="true">Introduction to error handling with try-except blocks</td>
-        <td contenteditable="true">How to debug common errors in Python code</td>
+        <td contenteditable="true">List indexing and slicing</td>
+        <td contenteditable="true">Iterating through lists</td>
+        <td><a href="https://shawnray09.github.io/shawnr_2025/2024/10/10/3_10_hacks.html" target="_blank">Hack 3.10</a></td>
     </tr>
-    </table>
+</table>
+
+
 
 
 
