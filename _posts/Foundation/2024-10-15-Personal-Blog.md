@@ -26,59 +26,6 @@ We taught lesson 3.8 which was iterations
 
 
 ```python
-from IPython.core.display import HTML
-
-
-lesson_links = {
-    "Lesson 3.1": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p1/3-1-1",
-    "Lesson 3.2": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/home",
-    "Lesson 3.3": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-3/p1",
-    "Lesson 3.4": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p1/3-4",
-    "Lesson 3.5": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-5/p1",
-    "Lesson 3.6": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-6/p1",
-    "Lesson 3.7": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-7/p1",
-    "Lesson 3.8": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-8/p1",
-    "Lesson 3.10": "https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/p1/3-10"
-}
-
-
-things_learned = {
-    "Lesson 3.1": ["Introduction to Python syntax and basic data types", "How to use variables and print statements"],
-    "Lesson 3.2": ["Understanding conditionals and if-else statements", "Logical operators and their role in decision-making"],
-    "Lesson 3.3": ["Introduction to loops, focusing on for loops", "How loops help automate repetitive tasks"],
-    "Lesson 3.4": ["Working with while loops and conditions", "Difference between for and while loops"],
-    "Lesson 3.5": ["Introduction to functions and defining reusable code", "How to pass arguments to functions"],
-    "Lesson 3.6": ["Understanding return values in functions", "Best practices for function naming and modularity"],
-    "Lesson 3.7": ["Introduction to lists and how to manipulate them", "Basic list methods like append, remove, and sort"],
-    "Lesson 3.8": ["Working with dictionaries and key-value pairs", "How to iterate through a dictionary using loops"],
-    "Lesson 3.10": ["Introduction to error handling with try-except blocks", "How to debug common errors in Python code"]
-}
-
-
-table_html = """
-<table border="1" style="border-collapse: collapse; width: 70%;">
-    <tr>
-        <th>Lesson</th>
-        <th>Thing Learned 1</th>
-        <th>Thing Learned 2</th>
-    </tr>
-"""
-
-
-for lesson, link in lesson_links.items():
-    thing1, thing2 = things_learned.get(lesson, ["", ""])  
-    table_html += f"""
-    <tr>
-        <td><a href="{link}" target="_blank">{lesson}</a></td>
-        <td contenteditable="true">{thing1}</td>
-        <td contenteditable="true">{thing2}</td>
-    </tr>
-    """
-
-table_html += "</table>"
-
-
-HTML(table_html)
 
 ```
 
