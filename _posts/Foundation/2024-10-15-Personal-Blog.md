@@ -8,9 +8,7 @@ comments: True
 ## What I Taught
 
 
-```python
 
-```
 
 We taught lesson 3.8 which was iterations
 1. Loops
@@ -25,9 +23,7 @@ We taught lesson 3.8 which was iterations
 ## What I learned
 
 
-```python
 
-```
 
 
 
