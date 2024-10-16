@@ -5,6 +5,7 @@ description: How I got my tool setup to work
 type: issues
 comments: True
 ---
+
 ## Background
 
 During the first couple days of school, many of us had a lot of trouble with our tool setup. With this trouble, Mr. Mort had the brilliant idea to just have the CSA students help us setup for their own grade. So we went over to Mr. Mort's period 1 CSA class and here are the steps of what happened
