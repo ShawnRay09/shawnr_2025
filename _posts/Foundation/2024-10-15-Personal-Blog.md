@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Shawn Ray's Sprint 2 Personal Blog
+title: Sprint Two Personal Blog
 description: Personal Blog about Sprint 2
 type: issues
 comments: True
 ---
+
 ## What I Taught
 
 
