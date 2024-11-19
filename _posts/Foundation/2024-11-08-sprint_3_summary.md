@@ -26,11 +26,10 @@ As shown above, I worked on the frontend work with my friend Aarav and was respo
 
 <img src="{{site.baseurl}}/images/chatroom.png" width="500" alt="chatroom">
 
+# Planning
+Making an issue and communicating with our other groups in our class helped us plan and design this whole project
 
-
-```python
-
-```
+<img src="{{site.baseurl}}/images/issue.png" width="800" alt="issue">
 
 # Key Features
 
@@ -57,6 +56,14 @@ Simple resources were provided like links, calculators, dictionaries. These are 
 <img src="{{site.baseurl}}/images/jupyter_resources.png" width="500" alt="resources">
 
 
+# What we learned
+
+| Topic          | How it affects our coding       |
+|---------------|------------|
+| Postman API  | Connecting our backend to frontend allows us to create and use applications like our social media platform in order to help us communicate thoughts, ideas, and more. Additionally, connecting our backend to our frontend allows us to be able to store data that can then be recalled to display for others to see.|
+| Planning      | Creating issues, canva drawings, and overall communication was essential in this project. These simple rough drafts helped us develop and enhance the final product of our social media platform. Additionally, communication with the class and teachers were essential as well because it allowed us to integrate all of our ideas in a creative and fun way.|
+| Teamwork       | Speaking of communication, that plays a big part in teamwork. Working with not only our teammates but also classmates helped us organize and plan this whole project more thoroughly to ensure that things run smoother without many problems. Because all of us had a plan and communicated with each other as well as to our scrum master of scrum masters and our integrator of integrators, we were all able to integrate our platforms and creative thinking into the same website.|
+| Presenting, Sharing Ideas, and Recieving Feedback    | Showing other people our social media platforms and asking for feedback helped us decide what needed to be tweaked and fixed about our website, as well as what we should add.|
 
 # Improvements
 -Next time I think adding some more individuality between each person would have been a lot better for the users. For example, a prompt could ask what class each user has each period, and the timer is individually set to show that certain class and when that certain class starts and ends rather than just a simple school timer. Additionally, it could give you those certain resources for even more quick and easy access for students to use.
