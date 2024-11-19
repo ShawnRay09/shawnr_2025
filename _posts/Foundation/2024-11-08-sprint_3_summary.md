@@ -9,12 +9,12 @@ comments: True
 
 Sprint 3 asked us to plan, design, code, and finally create a fully interactive social media platform for others to chat and interact with. For Mr. Brown's period 1 class, our theme was "Shared Interests" in which we decided to do the subtheme of school subjects. The website had to include front-end work which is the styling, and overall look of the pages and site, whilst the back-end work was the work that actually contained the data and content that was stored. We built a page where people are able to talk about certain school subjects and other topics with other people and also other aspects like a fully functional school timer with a resources tab. The main challenge was successfully connecting our back-end to our front-end whilst maintaining our fully functional website with other people working on it at the same time.
 
+[Jupyter](https://shawnray09.github.io/flocker_frontend/shared_interests/jupyter/home/)
+
 # Background 
 The backend has a database that stores all of the data and the python based backend interacts with the database in order to use the data to send or manipulate the data to send it to the frontend. This happens with the data is called from the frontend and in our case, it is when we click "show posts". Additionally, when we pick a group and channel and send the message from the frontend to the backend, the backend stores that data in a database.
 
 <img src="{{site.baseurl}}/images/visual.png" width="500" alt="visual">
-
-[Jupyter](https://shawnray09.github.io/flocker_frontend/shared_interests/jupyter/home/)
 
 
 # Team Contributions
