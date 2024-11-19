@@ -60,6 +60,7 @@ Simple resources were provided like links, calculators, dictionaries. These are 
 
 # Improvements
 -Next time I think adding some more individuality between each person would have been a lot better for the users. For example, a prompt could ask what class each user has each period, and the timer is individually set to show that certain class and when that certain class starts and ends rather than just a simple school timer. Additionally, it could give you those certain resources for even more quick and easy access for students to use.
+
 -Simply more chats could have been added to increase the amount of people that would be interested in this site and using this site in general. More subjects and chats would help students by providing them more resources and places to talk in for help or entertainment.
 
 # Overall
