@@ -8,24 +8,13 @@ comments: True
 
 # Shawn.py Postman API Testing
 
-I created a Shawn.py file to do testing and inputted this code into the file. Essentially, what this code does is setup the api/shawn as an endpoint that handles get and post requests. 
+I created a Shawn.py file to do testing and inputted this code into the file. I set an endpoint of /api/shawn that returns information about me from the backend.
 
 <img src="{{site.baseurl}}/images/shawnpy.png" width="700" alt="shawnpy">
 
-<img src="{{site.baseurl}}/images/postzoom.png" width="500" alt="postzoom">
+## Postman Information Working
 
-This part handles the post part and accepts the incoming JSON data and adds it to the stored data. It then sends back a confirmation message letting the user know that that data has been successfully stored, "Data Recieved". If that data is invalid it will return an error message with a 400 status code.
-
-<img src="{{site.baseurl}}/images/getzoom.png" width="500" alt="getzoom">
-
-This part handles get requests and sends all of the stored data from the post requests as a JSON reponse.
-
-## Postman POST Request Success
-
-<img src="{{site.baseurl}}/images/postpy.png" width="700" alt="postpy">
-
-## Postman GET Request Success
-<img src="{{site.baseurl}}/images/getpy.png" width="700" alt="getpy">
+<img src="{{site.baseurl}}/images/shawnpyworking.png" width="700" alt="working">
 
 
 # Neptune with Postman API
