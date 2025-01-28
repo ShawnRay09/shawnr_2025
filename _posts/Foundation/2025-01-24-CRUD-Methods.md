@@ -205,6 +205,18 @@ def delete():
     except Exception as e:
         return {"message": f"Error deleting class: {str(e)}"}, 500
 ```
+## Postman requests
+
+### Working Post
+
+<img src="{{site.baseurl}}/images/postmanpost.png" width="500" alt="postman">
+
+### Error
+
+This is an error that occurs when the user only fills out 2 of the 3 required categories.
+
+<img src="{{site.baseurl}}/images/postmanerror.png" width="500" alt="postman">
+
 ## Working CRUD Functions Demonstration
 
 <video width="640" height="360" controls>
