@@ -209,13 +209,13 @@ def delete():
 
 ### Working Post
 
-<img src="{{site.baseurl}}/images/postmanpost.png" width="500" alt="postman">
+<img src="{{site.baseurl}}/images/postmanpost.png" width="900" alt="postman">
 
 ### Error
 
 This is an error that occurs when the user only fills out 2 of the 3 required categories.
 
-<img src="{{site.baseurl}}/images/postmanerror.png" width="500" alt="postman">
+<img src="{{site.baseurl}}/images/postmanerror.png" width="900" alt="postman">
 
 ## Working CRUD Functions Demonstration
 
