@@ -6,6 +6,18 @@ type: issues
 comments: True
 ---
 
+# Neptune
+Welcome to **Neptune**, the ultimate online platform for students! At Neptune, students can collaborate, share ideas, and utilize a suite of powerful tools to boost their productivity and excel in their studies.
+## Features
+- **Collaboration:** Connect with fellow students, work together on projects, and share resources.
+- **Productivity Tools:** Make use of various tools like Gemini to enhance your efficiency and manage your time effectively.
+- **Community:** Join a vibrant community of motivated students who are all striving to be their best.
+Join Neptune today and become the most productive student you can be!
+
+### My Feature
+
+My feature is used as a schedule where students can send a list of their classes and it will store in the "classes" table.
+
 ### Intializing the Table
 
 The "Class" Model is defined with the code below and includes three key fields or columns, "_period", "_pick", and "_user". 
