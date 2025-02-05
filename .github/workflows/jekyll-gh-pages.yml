@@ -41,6 +41,11 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Upload Jekyll build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-build
+          path: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
