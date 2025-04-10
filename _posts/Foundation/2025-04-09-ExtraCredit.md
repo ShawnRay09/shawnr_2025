@@ -6,10 +6,6 @@ type: issues
 comments: True
 ---
 
-# Extra Credit  
-**Reflection**  
-**April 9, 2025 • 3 min read**
-
 ## What I Learned from the Cybersecurity Panel
 
 ### My Experience  
