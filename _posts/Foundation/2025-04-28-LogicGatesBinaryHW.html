@@ -1,0 +1,68 @@
+---
+layout: post
+title: Logic Gates and Binary HW
+description: 
+type: issues
+comments: True
+---
+
+<h1>Binary to Hexadecimal Converter</h1>
+
+<input type="text" id="binaryInput" placeholder="Enter binary number">
+<button onclick="convertBinary()">Convert</button>
+
+<h2>Result:</h2>
+<p id="result"></p>
+
+<h2>Conversion History:</h2>
+<ul id="history"></ul>
+
+<script>
+    // Load history from localStorage if available
+    const conversionHistory = JSON.parse(localStorage.getItem('conversionHistory')) || [];
+
+    function saveHistory() {
+        localStorage.setItem('conversionHistory', JSON.stringify(conversionHistory));
+    }
+
+    function convertBinary() {
+        const binary = document.getElementById('binaryInput').value.trim();
+
+        // Validate: check if the input is a binary number
+        if (!/^[01]+$/.test(binary)) {
+            document.getElementById('result').innerText = 'Error: Please enter a valid binary number.';
+            return;
+        }
+
+        // Convert binary to decimal, then to hexadecimal
+        const decimal = parseInt(binary, 2);
+        const hexa = decimal.toString(16).toUpperCase();
+
+        // Add to history
+        conversionHistory.push({ binary: binary, hexadecimal: hexa });
+
+        // Save updated history to localStorage
+        saveHistory();
+
+        // Show result
+        document.getElementById('result').innerText = `Hexadecimal: ${hexa}`;
+
+        // Update history display
+        updateHistory();
+    }
+
+    function updateHistory() {
+        const historyList = document.getElementById('history');
+        historyList.innerHTML = ''; // Clear old history
+
+        // Add each past conversion
+        conversionHistory.forEach(record => {
+            const li = document.createElement('li');
+            li.textContent = `Binary: ${record.binary} → Hexadecimal: ${record.hexadecimal}`;
+            historyList.appendChild(li);
+        });
+    }
+
+    // Populate history when the page loads
+    updateHistory();
+</script>
